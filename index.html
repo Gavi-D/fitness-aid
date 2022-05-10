@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type='text/javascript' src='assignment11.js'></script>
+    <link rel="stylesheet" href="style11.css">
+</head>
+
+<body>
+    <div data-role="page" id="pageHome">
+        <div data-role="header">
+            <h1>Fitness Aide App</h1>
+            <h2 class="mbj">LogIn Page</h2>
+        </div>
+        <div data-role="content">
+            Email:<br><input type="text" id="email"></input>
+            <div>
+              <table>
+                <tr>
+                  <td>Password:<input type="text" id="password"></input></td>
+                  <td><input type="checkbox" id="see"><label for="see">See Password?</label></td>
+                </tr>
+              </table>
+            </div>
+
+            <button onclick="submitInfo()">Login</button>
+            <button onclick="signUp()">Sign Up</button
+
+                <div>
+                    <table>
+                        <tr>
+                            <td><button onclick="addDigitToPassword(7)"> 7 </button></td>
+                            <td><button onclick="addDigitToPassword(8)"> 8 </button></td>
+                            <td><button onclick="addDigitToPassword(9)"> 9 </button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="addDigitToPassword(4)"> 4 </button></td>
+                            <td><button onclick="addDigitToPassword(5)"> 5 </button></td>
+                            <td><button onclick="addDigitToPassword(6)"> 6 </button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="addDigitToPassword(1)"> 1 </button></td>
+                            <td><button onclick="addDigitToPassword(2)"> 2 </button></td>
+                            <td><button onclick="addDigitToPassword(3)"> 3 </button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="addDigitToPassword(0)"> 0 </button></td>
+                        </tr>
+                    </table>
+                </div>
+                <button onclick="clearPassword()">Clear Password</button>
+                <br>
+            </div>
+        </div>
+
+
+        <div data-role="page" id="signUpPage">
+            <div data-role="header">
+                <div>Sign Up Fitness Aide</div>
+            </div>
+            <div data-role="content">
+                First Name:<input type="text" id="firstName">
+                Last Name:<br><input type="text" id="lastName">
+                Email Address:<br><input type="text" id="newEmail">
+                Password(numeric values only):<br><input type="number" id="newUserPassword">
+                <button onclick="addUser();">Sign Up</button>
+                <button onclick="loginScreen();">Back to login</button>
+            </div>
+        </div>
+
+        <div data-role="page" id="welcomePage">
+            <div data-role="header">
+                <div>Welcome to Fitness Aide</div>
+            </div>
+            <div data-role="content">
+                Muscle Group:<br><input type="text" id="muscleGroup"><br>
+                <button onclick="createActivities();">Submit</button>
+                <button onclick="loginScreen();">Back to login</button>
+
+                <div id="activitiesList"></div>
+            </div>
+        </div>
+
+    </body>
+    </html>
